@@ -22,8 +22,8 @@ export const JobsDummyData = [
     location: " - Münster",
   },
   {
-    jobtitle: "Online Marketing",
-    category: "Online Marketing",
+    jobtitle: "online-marketing",
+    category: "online-marketing",
     salary: "Estimated  40.000 - 50.000€/Jahr",
     company: "Amazon",
 
@@ -85,7 +85,7 @@ export const JobsDummyData = [
   },
   {
     jobtitle: "Social Media Manager",
-    category: "Online Marketing",
+    category: "online-marketing",
     salary: "Estimated  40.000 € - 50.000/Jahr",
     company: "Instagram",
     location: " - Remote",
