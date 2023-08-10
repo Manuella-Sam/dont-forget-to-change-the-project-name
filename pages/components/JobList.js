@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledArticle = styled.article`
   border-radius: 20px;
