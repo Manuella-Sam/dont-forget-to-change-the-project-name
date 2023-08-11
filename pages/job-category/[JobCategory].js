@@ -10,8 +10,6 @@ const StyledButton = styled.button`
   border-radius: 10px;
   margin: 10px;
   background-color: lightblue;
-  position: absolute;
-  bottom: 0px;
   color: blue;
 `;
 
