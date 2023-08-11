@@ -33,22 +33,40 @@ const StyledSpan = styled.span`
   color: darkblue;
 `;
 
+const StyledButton = styled.button`
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: lightblue;
+  position: relative;
+  bottom: 0px;
+  color: white;
+`;
+
 export default function JobList({ jobs }) {
   return (
-    <StyledSection>
-      <StyledHeading>Job List</StyledHeading>
-      {jobs.map((job) => {
-        return (
-          <StyledArticle key={uuidv4()}>
-            <StyledSpan>
-              <p>{job.jobtitle}</p>
-            </StyledSpan>
-            {job.company}
-            {job.location}
-            <p>{job.salary}</p>
-          </StyledArticle>
-        );
-      })}
-    </StyledSection>
+    <>
+      <StyledSection>
+        <StyledHeading>Job List</StyledHeading>
+        {jobs.map((job) => {
+          return (
+            <StyledArticle key={uuidv4()}>
+              <StyledSpan>
+                <p>{job.jobtitle}</p>
+              </StyledSpan>
+              {job.company}
+              {job.location}
+              <p>{job.salary}</p>
+            </StyledArticle>
+          );
+        })}
+      </StyledSection>
+      <StyledButton>
+        <Link style={{ textDecoration: "none" }} href="/job-category">
+          Go To Categories
+        </Link>
+      </StyledButton>
+    </>
   );
 }

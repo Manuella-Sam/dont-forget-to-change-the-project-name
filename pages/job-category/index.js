@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import JobList from "../components/JobList";
 import { v4 as uuidv4 } from "uuid";
-import tailwindConfig from "@/tailwind.config";
-import postcssConfig from "@/postcss.config";
 import Image from "next/image";
 
 const StyledArticle = styled.article`
@@ -20,21 +18,21 @@ const StyledArticle = styled.article`
 
 const StyledHeading = styled.h1`
   text-align: center;
-  color: white;
 `;
-const StyledSpan = styled.span`
+const StyledBox = styled.div`
   border-radius: 20px;
   border: 1px lightgrey;
   box-shadow: 1px 1px 2px lightgrey;
   background-color: #c8c8c8;
+  color: white;
   margin: 5px;
   padding: 10px;
   width: 400px;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   font-size: 20px;
+  position: relative;
 `;
 
 const StyledDiv = styled.div`
@@ -47,111 +45,162 @@ const StyledDiv = styled.div`
   background-color: white;
 `;
 
-const StyledDiv1 = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   text-align: center;
   flex-align: center;
-  postion: absolute;
-  left: 30px;
 `;
 
-const StyledP = styled.p`
-  color: white;
-`;
+const StyledP = styled.p``;
 
 const StyledSection = styled.section`
   postion: absolute;
   width: 80 %;
 `;
 
-const StyledSpan1 = styled.span``;
+const StyledButton = styled.button`
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  border-color: white;
+  margin: 10px;
+  background-color: lightblue;
+  color: blue;
+`;
 
 export default function createJobcategory() {
   return (
-    <StyledDiv>
-      <StyledDiv1>
-        <StyledSpan>
-          <Image
-            src="/1.jpg"
-            width={400}
-            height={200}
-            alt="Picture of the author"
-          />
-          <StyledHeading>Full-Stack</StyledHeading>
-          <StyledP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            iaculis, nulla ac convallis rutrum, erat enim porta dui, id lobortis
-            ex nulla vel leo.
-          </StyledP>
-        </StyledSpan>
-      </StyledDiv1>
+    <>
+      <StyledDiv>
+        <StyledContainer>
+          <StyledBox>
+            <Image
+              src="/1.jpg"
+              width={400}
+              height={200}
+              alt="Picture of the author"
+            />
+            <StyledHeading>Full-Stack</StyledHeading>
+            <StyledP>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
+              dui, id lobortis ex nulla vel leo.
+              <StyledButton>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  href="/job-category/Full-Stack"
+                >
+                  Find Full-Stack Jobs
+                </Link>
+              </StyledButton>
+            </StyledP>
+          </StyledBox>
+        </StyledContainer>
 
-      <div class="card">
-        <StyledSpan>
-          <Image
-            src="/7.jpg"
-            width={400}
-            height={200}
-            alt="Picture of the author"
-          />
-          <StyledHeading>Front-End</StyledHeading>
-          <StyledP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            iaculis, nulla ac convallis rutrum, erat enim porta dui, id lobortis
-            ex nulla vel leo.
-          </StyledP>
-        </StyledSpan>
-      </div>
-      <div class="card">
-        <StyledSpan>
-          <Image
-            src="/5.jpg"
-            width={400}
-            height={200}
-            alt="Picture of the author"
-          />
-          <StyledHeading>UX</StyledHeading>
-          <StyledP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            iaculis, nulla ac convallis rutrum, erat enim porta dui, id lobortis
-            ex nulla vel leo.
-          </StyledP>
-        </StyledSpan>
-      </div>
+        <div class="card">
+          <StyledBox>
+            <Image
+              src="/7.jpg"
+              width={400}
+              height={200}
+              alt="Picture of the author"
+            />
+            <StyledHeading>Front-End</StyledHeading>
+            <StyledP>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
+              dui, id lobortis ex nulla vel leo.
+              <StyledButton>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  href="/job-category/Front-End"
+                >
+                  Find Front-End Jobs
+                </Link>
+              </StyledButton>
+            </StyledP>
+          </StyledBox>
+        </div>
+        <div class="card">
+          <StyledBox>
+            <Image
+              src="/5.jpg"
+              width={400}
+              height={200}
+              alt="Picture of the author"
+            />
+            <StyledHeading>UX</StyledHeading>
+            <StyledP>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
+              dui, id lobortis ex nulla vel leo.
+              <StyledButton>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  href="/job-category/UX"
+                >
+                  Find UX Jobs
+                </Link>
+              </StyledButton>
+            </StyledP>
+          </StyledBox>
+        </div>
 
-      <div class="card">
-        <StyledSpan>
-          <Image
-            src="/4.jpg"
-            width={400}
-            height={200}
-            alt="Picture of the author"
-          />
-          <StyledHeading>Online-Marketing</StyledHeading>
-          <StyledP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            iaculis, nulla ac convallis rutrum, erat enim porta dui, id lobortis
-            ex nulla vel leo.
-          </StyledP>
-        </StyledSpan>
-      </div>
+        <div class="card">
+          <StyledBox>
+            <Image
+              src="/4.jpg"
+              width={400}
+              height={200}
+              alt="Picture of the author"
+            />
+            <StyledHeading>Online-Marketing</StyledHeading>
+            <StyledP>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
+              dui, id lobortis ex nulla vel leo.
+              <StyledButton>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  href="/job-category/Online-Marketing"
+                >
+                  Find Online-Marketing Jobs
+                </Link>
+              </StyledButton>
+            </StyledP>
+          </StyledBox>
+        </div>
 
-      <StyledSection>
-        <StyledSpan>
-          <Image
-            src="/3.jpg"
-            width={400}
-            height={200}
-            alt="Picture of the author"
-          />
-          <StyledHeading>Back-end</StyledHeading>
-          <StyledP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            iaculis, nulla ac convallis rutrum, erat enim porta dui, id lobortis
-            ex nulla vel leo.
-          </StyledP>
-        </StyledSpan>
-      </StyledSection>
-    </StyledDiv>
+        <StyledSection>
+          <StyledBox>
+            <Image
+              src="/3.jpg"
+              width={400}
+              height={200}
+              alt="Picture of the author"
+            />
+            <StyledHeading>Back-end</StyledHeading>
+            <StyledP>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
+              dui, id lobortis ex nulla vel leo.
+              <StyledButton>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  href="/job-category/Back-End"
+                >
+                  Find Back-End Jobs
+                </Link>
+              </StyledButton>
+            </StyledP>
+          </StyledBox>
+        </StyledSection>
+      </StyledDiv>
+      <StyledButton>
+        <Link style={{ textDecoration: "none" }} href="/">
+          Home
+        </Link>
+      </StyledButton>
+    </>
   );
 }

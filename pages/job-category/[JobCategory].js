@@ -1,7 +1,19 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { JobsDummyData } from "../api/db";
 import { useRouter } from "next/router";
 import JobList from "../components/JobList";
+import Link from "next/link";
+
+const StyledButton = styled.button`
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: lightblue;
+  position: absolute;
+  bottom: 0px;
+  color: blue;
+`;
 
 export default function JobsCategory({ jobs }) {
   const router = useRouter();
@@ -13,6 +25,14 @@ export default function JobsCategory({ jobs }) {
     (job) => job.category.toLowerCase() === jobCategory.toLowerCase()
   );
 
-  console.log(filteredJobs);
-  return <JobList jobs={filteredJobs} />;
+  return (
+    <>
+      <JobList jobs={filteredJobs} />
+      <StyledButton>
+        <Link style={{ textDecoration: "none" }} href="/">
+          Home
+        </Link>
+      </StyledButton>
+    </>
+  );
 }
