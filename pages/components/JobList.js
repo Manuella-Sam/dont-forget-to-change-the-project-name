@@ -44,6 +44,10 @@ const StyledButton = styled.button`
   color: white;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 export default function JobList({ jobs }) {
   return (
     <>
@@ -63,9 +67,7 @@ export default function JobList({ jobs }) {
         })}
       </StyledSection>
       <StyledButton>
-        <Link style={{ textDecoration: "none" }} href="/job-category">
-          Go To Categories
-        </Link>
+        <StyledLink href="/job-category">Go To Categories</StyledLink>
       </StyledButton>
     </>
   );

@@ -68,6 +68,10 @@ const StyledButton = styled.button`
   color: blue;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 export default function createJobcategory() {
   return (
     <>
@@ -86,12 +90,9 @@ export default function createJobcategory() {
               Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
-                <Link
-                  style={{ textDecoration: "none" }}
-                  href="/job-category/Full-Stack"
-                >
+                <StyledLink href="/job-category/Full-Stack">
                   Find Full-Stack Jobs
-                </Link>
+                </StyledLink>
               </StyledButton>
             </StyledP>
           </StyledBox>
@@ -111,12 +112,9 @@ export default function createJobcategory() {
               Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
-                <Link
-                  style={{ textDecoration: "none" }}
-                  href="/job-category/Front-End"
-                >
+                <StyledLink href="/job-category/Front-End">
                   Find Front-End Jobs
-                </Link>
+                </StyledLink>
               </StyledButton>
             </StyledP>
           </StyledBox>
@@ -135,12 +133,7 @@ export default function createJobcategory() {
               Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
-                <Link
-                  style={{ textDecoration: "none" }}
-                  href="/job-category/UX"
-                >
-                  Find UX Jobs
-                </Link>
+                <StyledLink href="/job-category/UX">Find UX Jobs</StyledLink>
               </StyledButton>
             </StyledP>
           </StyledBox>
@@ -160,12 +153,9 @@ export default function createJobcategory() {
               Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
-                <Link
-                  style={{ textDecoration: "none" }}
-                  href="/job-category/Online-Marketing"
-                >
+                <StyledLink href="/job-category/Online-Marketing">
                   Find Online-Marketing Jobs
-                </Link>
+                </StyledLink>
               </StyledButton>
             </StyledP>
           </StyledBox>
@@ -185,21 +175,16 @@ export default function createJobcategory() {
               Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
-                <Link
-                  style={{ textDecoration: "none" }}
-                  href="/job-category/Back-End"
-                >
+                <StyledLink href="/job-category/Back-End">
                   Find Back-End Jobs
-                </Link>
+                </StyledLink>
               </StyledButton>
             </StyledP>
           </StyledBox>
         </StyledSection>
       </StyledDiv>
       <StyledButton>
-        <Link style={{ textDecoration: "none" }} href="/">
-          Home
-        </Link>
+        <StyledLink href="/">Home</StyledLink>
       </StyledButton>
     </>
   );

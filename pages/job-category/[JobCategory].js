@@ -13,6 +13,10 @@ const StyledButton = styled.button`
   color: blue;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 export default function JobsCategory({ jobs }) {
   const router = useRouter();
   const jobCategory = router.query.JobCategory;
@@ -27,9 +31,7 @@ export default function JobsCategory({ jobs }) {
     <>
       <JobList jobs={filteredJobs} />
       <StyledButton>
-        <Link style={{ textDecoration: "none" }} href="/">
-          Home
-        </Link>
+        <StyledLink href="/">Home</StyledLink>
       </StyledButton>
     </>
   );
