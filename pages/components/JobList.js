@@ -16,7 +16,7 @@ const StyledArticle = styled.article`
 const StyledHeading = styled.h1`
   display: flex;
   text-align: center;
-  font-size: 40 px;
+  font-size: 40px;
   color: darkblue;
 `;
 
