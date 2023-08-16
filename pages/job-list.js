@@ -33,9 +33,9 @@ const StyledSpan = styled.span`
 `;
 
 export default function joblist({ data }) {
-  const router = useRouter();
+  const router = UseRouter();
   const { slug: websiteSlug } = router.query;
-  data = useSWR(
+  data = UseSWR(
     `https://arbeitnow.com/api/job-board-api${websiteSlug}`,
     fetcher
   );
@@ -56,10 +56,6 @@ export default function joblist({ data }) {
           );
         })}
       </StyledSection>
-      s
-      <StyledButton>
-        <StyledLink href="/job-category">Go To Categories</StyledLink>
-      </StyledButton>
     </>
   );
 }
