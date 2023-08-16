@@ -35,7 +35,7 @@ const StyledSpan = styled.span`
 export default function joblist({ data }) {
   const router = useRouter();
   const { slug: websiteSlug } = router.query;
-  const { data } = useSWR(
+  data = useSWR(
     `https://arbeitnow.com/api/job-board-api${websiteSlug}`,
     fetcher
   );
