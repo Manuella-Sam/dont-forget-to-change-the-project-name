@@ -42,7 +42,7 @@ const StyledDiv = styled.div`
   webkit-box-pack: center;
   flex-direction: row;
   justify-content: center;
-  background-color: white;
+  background-color: #FAFEE;
 `;
 
 const StyledContainer = styled.div`
@@ -61,20 +61,35 @@ const StyledSection = styled.section`
 const StyledButton = styled.button`
   height: 50px;
   width: 100px;
-  border-radius: 20px;
+  border-radius: 0px;
   border-color: white;
   margin: 10px;
-  background-color: lightblue;
+  background-color: white;
   color: blue;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
+const StyledHeader = styled.div`
+  background-color: #878DA;
+  text-align: center;
+  width: 2000px;
+  height: 500px;
+`;
 
 export default function createJobcategory() {
   return (
     <>
+      <StyledHeader>
+        <Image
+          src="/gradient.jpg"
+          width={2000}
+          height={500}
+          alt="bronze background"
+        />
+        Start your career here
+      </StyledHeader>
       <StyledDiv>
         <StyledContainer>
           <StyledBox>
@@ -91,7 +106,7 @@ export default function createJobcategory() {
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
                 <StyledLink href="/job-category/Full-Stack">
-                  Find Full-Stack Jobs
+                  Full-Stack Jobs
                 </StyledLink>
               </StyledButton>
             </StyledP>
@@ -113,7 +128,7 @@ export default function createJobcategory() {
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
                 <StyledLink href="/job-category/Front-End">
-                  Find Front-End Jobs
+                  Front-End Jobs
                 </StyledLink>
               </StyledButton>
             </StyledP>
@@ -133,7 +148,7 @@ export default function createJobcategory() {
               Suspendisse iaculis, nulla ac convallis rutrum, erat enim porta
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
-                <StyledLink href="/job-category/UX">Find UX Jobs</StyledLink>
+                <StyledLink href="/job-category/UX">UX Jobs</StyledLink>
               </StyledButton>
             </StyledP>
           </StyledBox>
@@ -154,7 +169,7 @@ export default function createJobcategory() {
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
                 <StyledLink href="/job-category/Online-Marketing">
-                  Find Online-Marketing Jobs
+                  Online-Marketing Jobs
                 </StyledLink>
               </StyledButton>
             </StyledP>
@@ -176,7 +191,7 @@ export default function createJobcategory() {
               dui, id lobortis ex nulla vel leo.
               <StyledButton>
                 <StyledLink href="/job-category/Back-End">
-                  Find Back-End Jobs
+                  Back-End Jobs
                 </StyledLink>
               </StyledButton>
             </StyledP>
