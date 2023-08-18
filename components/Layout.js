@@ -3,13 +3,13 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Navigation = styled.nav`
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
 
-  gap: 1 em;
+  gap: 5 em;
   background-color: lightblue;
   color: white;
 `;
@@ -27,17 +27,20 @@ const Header = styled.header`
   justify-content: center;
   background-color: lightblue;
   color: white;
+  font-size: 20px;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
-  display: flex;
-
-  gap: 1.5em;
+  margin: 2px, 2px, 3px, 0;
 `;
 
-const NavigationList = styled.ul``;
+const NavigationList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+`;
 
 const NavigationListItem = styled.li``;
 
@@ -50,66 +53,18 @@ const NavigationListItem = styled.li``;
 //     tags: ["Designer", "Developer"],
 //   },
 
-const StyledArticle = styled.article`
-  border-radius: 20px;
-  border: 1px solid lightgrey;
-  margin: 5px;
-  padding: 10px;
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-`;
-
-const StyledHeading = styled.h1`
-  display: flex;
-  text-align: center;
-  font-size: 40px;
-  color: darkblue;
-`;
-
-const StyledSection = styled.section`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const StyledSpan = styled.span`
-  font-size: 27px;
-  color: darkblue;
-`;
-
 export default function Layout({ children, users }) {
   return (
     <>
       <Header>My App Name</Header>
       <Wrapper>{children}</Wrapper>
 
-      <StyledSection>
-        <StyledHeading>Job List</StyledHeading>
-        {users.map((user) => {
-          return (
-            <StyledArticle key={uuidv4()}>
-              <StyledSpan>
-                <p>{users.jobtitle}</p>
-              </StyledSpan>
-              {users.start}
-              {users.salary}
-              {users.description}
-              <p>{users.tags}</p>
-            </StyledArticle>
-          );
-        })}
-      </StyledSection>
-
       <Navigation>
         <NavigationList>
           <NavigationListItem>
-            <StyledLink href="/job-seeking">Job Seeking</StyledLink>
             <StyledLink href="/">Job Offers</StyledLink>
             <StyledLink href="/job-category">Categories</StyledLink>
+            <StyledLink href="/jobseekers">Users</StyledLink>
           </NavigationListItem>
         </NavigationList>
       </Navigation>

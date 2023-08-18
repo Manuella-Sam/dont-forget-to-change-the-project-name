@@ -1,4 +1,4 @@
-const jobSeekingData = [
+export const jobSeekingData = [
   {
     jobtitle: "UX Designer with Development Background",
     start: "December 2023",
