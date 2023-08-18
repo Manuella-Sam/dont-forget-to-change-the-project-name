@@ -1,6 +1,6 @@
 import { useState } from "react";
 import GlobalStyle from "../styles";
-import { JobsDummyData } from "./api/job_offers";
+import { jobOffersData } from "./api/job_offers";
 import { jobSeekingData } from "./api/job_seeking.js";
 
 import Layout from "@/components/Layout";
