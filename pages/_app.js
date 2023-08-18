@@ -15,8 +15,8 @@ import Layout from "@/components/Layout";
 //   },
 
 export default function App({ Component, pageProps }) {
-  const [jobs, setJobs] = useState(JobsDummyData);
-  const [users, setUsers] = useState(jobSeekingData);
+  const [jobOffers, setJobOffers] = useState(jobOffersData);
+  const [seekingUsers, setSeekingUsers] = useState(jobSeekingData);
   console.log("jobSeekingData", jobSeekingData);
   return (
     <>
