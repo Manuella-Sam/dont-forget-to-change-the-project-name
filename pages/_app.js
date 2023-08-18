@@ -5,14 +5,6 @@ import { jobSeekingData } from "./api/job_seeking.js";
 
 import Layout from "@/components/Layout";
 
-// const jobSeekingData = [
-//   {
-//     jobtitle: "UX Designer with Development Background",
-//     start: "December 2023",
-//     salary: "60,000",
-//     desc: "I am looking for a job that will meet my expectations",
-//     tags: ["Designer", "Developer"],
-//   },
 
 export default function App({ Component, pageProps }) {
   const [jobOffers, setJobOffers] = useState(jobOffersData);
