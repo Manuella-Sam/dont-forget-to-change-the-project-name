@@ -64,7 +64,7 @@ export default function Layout({ children, seekingUsers }) {
           <NavigationListItem>
             <StyledLink href="/">Job Offers</StyledLink>
             <StyledLink href="/job-category">Categories</StyledLink>
-            <StyledLink href="/jobseekers">Users</StyledLink>
+            <StyledLink href="/job-seeking">Users</StyledLink>
           </NavigationListItem>
         </NavigationList>
       </Navigation>
