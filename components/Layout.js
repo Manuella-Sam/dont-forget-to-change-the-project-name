@@ -53,7 +53,7 @@ const NavigationListItem = styled.li``;
 //     tags: ["Designer", "Developer"],
 //   },
 
-export default function Layout({ children, users }) {
+export default function Layout({ children, seekingUsers }) {
   return (
     <>
       <Header>My App Name</Header>

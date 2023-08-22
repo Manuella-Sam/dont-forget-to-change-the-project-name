@@ -17,14 +17,14 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-export default function JobsCategory({ jobs }) {
+export default function JobsCategory({ jobOffers }) {
   const router = useRouter();
   const jobCategory = router.query.JobCategory;
   if (!jobCategory) {
     return null;
   }
-  const filteredJobs = jobs.filter(
-    (job) => job.category.toLowerCase() === jobCategory.toLowerCase()
+  const filteredJobs = jobOffers.filter(
+    (jobOffer) => jobOffer.category.toLowerCase() === jobCategory.toLowerCase()
   );
 
   return (

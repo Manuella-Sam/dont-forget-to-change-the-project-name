@@ -1,4 +1,4 @@
-export const JobsDummyData = [
+export const jobOffersData = [
   {
     jobtitle: "UI Designer",
     category: "UX",

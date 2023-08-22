@@ -33,20 +33,20 @@ const StyledSpan = styled.span`
   color: darkblue;
 `;
 
-export default function Page({ users }) {
+export default function Page({ seekingUsers }) {
   return (
     <StyledSection>
       <StyledHeading>Users</StyledHeading>
-      {users.map((user) => {
+      {seekingUsers.map((seekingUser) => {
         return (
           <StyledArticle key={uuidv4()}>
             <StyledSpan>
-              <p>{user.jobtitle}</p>
+              <p>{seekingUser.jobtitle}</p>
             </StyledSpan>
-            <p>{user.start}</p>
-            <p>{user.salary}</p>
-            <p>{user.desc}</p>
-            <p>{user.tags}</p>
+            <p>{seekingUser.start}</p>
+            <p>{seekingUser.salary}</p>
+            <p>{seekingUser.desc}</p>
+            <p>{seekingUser.tags}</p>
           </StyledArticle>
         );
       })}
