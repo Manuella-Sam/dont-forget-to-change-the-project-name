@@ -8,6 +8,7 @@ import Layout from "@/components/Layout";
 export default function App({ Component, pageProps }) {
   const [jobOffers, setJobOffers] = useState(jobOffersData);
   const [seekingUsers, setSeekingUsers] = useState(jobSeekingData);
+
   return (
     <>
       <GlobalStyle />

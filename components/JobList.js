@@ -48,12 +48,12 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-export default function JobList({ jobs }) {
+export default function JobList({ jobOffers }) {
   return (
     <>
       <StyledSection>
         <StyledHeading>Job List</StyledHeading>
-        {jobs.map((job) => {
+        {jobOffers.map((job) => {
           return (
             <StyledArticle key={uuidv4()}>
               <StyledSpan>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { JobsDummyData } from "../api/db";
+import { jobOffersData } from "../api/job_offers";
 import { useRouter } from "next/router";
-import JobList from "../components/JobList";
+import JobList from "../../components/JobList";
 import Link from "next/link";
 
 const StyledButton = styled.button`
@@ -29,7 +29,7 @@ export default function JobsCategory({ jobOffers }) {
 
   return (
     <>
-      <JobList jobs={filteredJobs} />
+      <JobList jobOffers={filteredJobs} />
       <StyledButton>
         <StyledLink href="/">Home</StyledLink>
       </StyledButton>
