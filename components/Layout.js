@@ -44,19 +44,10 @@ const NavigationList = styled.ul`
 
 const NavigationListItem = styled.li``;
 
-// const jobSeekingData = [
-//   {
-//     jobtitle: "UX Designer with Development Background",
-//     start: "December 2023",
-//     salary: "60,000",
-//     desc: "I am looking for a job that will meet my expectations",
-//     tags: ["Designer", "Developer"],
-//   },
-
 export default function Layout({ children, seekingUsers }) {
   return (
     <>
-      <Header>My App Name</Header>
+      <Header>JoB Search App </Header>
       <Wrapper>{children}</Wrapper>
 
       <Navigation>
