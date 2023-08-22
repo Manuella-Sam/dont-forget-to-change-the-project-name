@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import JobList from "../components/JobList";
+import JobList from "../../components/JobList";
 import { v4 as uuidv4 } from "uuid";
 import Image from "next/image";
 
@@ -35,7 +35,7 @@ const StyledBox = styled.div`
   position: relative;
 `;
 
-const StyledDiv = styled.div`
+const StyledCard = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10%;
@@ -75,7 +75,7 @@ const StyledLink = styled(Link)`
 export default function createJobcategory() {
   return (
     <>
-      <StyledDiv>
+      <StyledCard>
         <StyledContainer>
           <StyledBox>
             <Image
@@ -182,7 +182,7 @@ export default function createJobcategory() {
             </StyledP>
           </StyledBox>
         </StyledSection>
-      </StyledDiv>
+      </StyledCard>
       <StyledButton>
         <StyledLink href="/">Home</StyledLink>
       </StyledButton>

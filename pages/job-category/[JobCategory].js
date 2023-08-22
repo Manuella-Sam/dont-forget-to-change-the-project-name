@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { JobsDummyData } from "../api/db";
+import { jobOffersData } from "../api/job_offers";
 import { useRouter } from "next/router";
-import JobList from "../components/JobList";
+import JobList from "../../components/JobList";
 import Link from "next/link";
 
 const StyledButton = styled.button`
@@ -17,19 +17,19 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-export default function JobsCategory({ jobs }) {
+export default function JobsCategory({ jobOffers }) {
   const router = useRouter();
   const jobCategory = router.query.JobCategory;
   if (!jobCategory) {
     return null;
   }
-  const filteredJobs = jobs.filter(
-    (job) => job.category.toLowerCase() === jobCategory.toLowerCase()
+  const filteredJobs = jobOffers.filter(
+    (jobOffer) => jobOffer.category.toLowerCase() === jobCategory.toLowerCase()
   );
 
   return (
     <>
-      <JobList jobs={filteredJobs} />
+      <JobList jobOffers={filteredJobs} />
       <StyledButton>
         <StyledLink href="/">Home</StyledLink>
       </StyledButton>

@@ -1,13 +1,24 @@
 import { useState } from "react";
 import GlobalStyle from "../styles";
-import { JobsDummyData } from "./api/db";
+import { jobOffersData } from "./api/job_offers";
+import { jobSeekingData } from "./api/job_seeking.js";
+
+import Layout from "@/components/Layout";
 
 export default function App({ Component, pageProps }) {
-  const [jobs, setJobs] = useState(JobsDummyData);
+  const [jobOffers, setJobOffers] = useState(jobOffersData);
+  const [seekingUsers, setSeekingUsers] = useState(jobSeekingData);
+
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} jobs={jobs} />
+      <Layout>
+        <Component
+          {...pageProps}
+          jobOffers={jobOffers}
+          seekingUsers={seekingUsers}
+        />
+      </Layout>
     </>
   );
 }
