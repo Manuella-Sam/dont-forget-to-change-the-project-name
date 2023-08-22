@@ -35,7 +35,7 @@ const StyledBox = styled.div`
   position: relative;
 `;
 
-const StyledDiv = styled.div`
+const StyledCard = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10%;
